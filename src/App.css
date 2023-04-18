@@ -1,0 +1,31 @@
+.navbar-class{
+  color: #fff;
+  padding-left: 50px;
+}
+.jumbotron-color{
+  background-color: blueviolet;
+    color: #fff;
+}
+.footer-color{
+  background-color: #0d0d43;
+  color: #fff;
+}
+
+.page-enter {
+  opacity: 0.01;
+  transform: translateX(-100%);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 300ms ease-in;
+}
+.page-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.page-exit-active {
+  opacity: 0.01;
+  transform: translateX(100%);
+  transition: all 300ms ease-out;
+}
