@@ -32,9 +32,9 @@ const mapDispatchToProps = (dispatch) => ({
    });
 
 class Main extends Component {
-   // constructor(props) {
-   //    super(props);
-   // }
+   constructor(props) {
+      super(props);
+   }
 
    componentDidMount (){
       this.props.fetchDishes();
@@ -45,6 +45,7 @@ class Main extends Component {
 
    render() {
       const HomePage =()=>{
+         console.log("Test",this.props.leaders)
          return (
             <Home dish={this.props.dishes.dishes.filter((dish)=>dish.featured)[0]} 
             dishesLoading ={this.props.dishes.isLoading}
@@ -52,8 +53,10 @@ class Main extends Component {
             promotion={this.props.promotions.promotions.filter((prom)=>prom.featured)[0]}
             promosLoading ={this.props.promotions.isLoading}
             promosErrMess ={this.props.promotions.errMess}
-
-            leader={this.props.leaders.leaders.filter((leader) => leader.featured)[0]} leadersLoading={this.props.leaders.isLoading} leadersErrMess={this.props.leaders.errMess} />
+            leader={this.props.leaders.filter((leader) => leader.featured)[0]} 
+            leadersLoading={this.props.leaders.isLoading} 
+            leadersErrMess={this.props.leaders.errMess} 
+            />
          );
       }
       const ContactPage = () => {
